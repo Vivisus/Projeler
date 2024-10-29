@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/girdiOne"
+        android:layout_width="218dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:hint="İlk sayıyı giriniz"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/girdiTwoo"
+        android:layout_width="223dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="İkinci sayıyı giriniz"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/girdiOne" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/girdiTwoo">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:backgroundTint="#78541E"
+            android:onClick="toplama"
+            android:text="+"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:backgroundTint="#78541E"
+            android:onClick="cikarma"
+            android:text="-"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/girdiTwoo" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:backgroundTint="#78541E"
+            android:onClick="carpma"
+            android:text="*"
+            app:layout_constraintEnd_toEndOf="@+id/girdiTwoo"
+            app:layout_constraintTop_toBottomOf="@+id/girdiTwoo" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:backgroundTint="#78541E"
+            android:onClick="bolme"
+            android:text="/"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sonucYazisi"
+        android:layout_width="222dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        android:text="Sonuç:"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/girdiTwoo"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/girdiTwoo"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
