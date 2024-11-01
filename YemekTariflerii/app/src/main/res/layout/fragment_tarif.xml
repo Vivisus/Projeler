@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.TarifFragment">
+
+    <ImageView
+        android:id="@+id/yemekView"
+        android:layout_width="216dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="60dp"
+        android:onClick="gorsel"
+        android:src="@drawable/görsell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yemekismiText"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Lütfen yemek ismini giriniz"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yemekView" />
+
+    <TextView
+        android:id="@+id/malzemeText"
+        android:layout_width="328dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="40dp"
+        android:hint="Yemek malzemelerini giriniz"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yemekismiText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/malzemeText"
+        app:layout_constraintVertical_bias="0.772">
+
+        <Button
+            android:id="@+id/kayitButon"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:onClick="kaydet"
+            android:text="Kaydet" />
+
+        <Button
+            android:id="@+id/silButon"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:onClick="sil"
+            android:text="Sil" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
